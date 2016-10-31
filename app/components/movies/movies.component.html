@@ -1,32 +1,40 @@
 <div class="row">
-  <div class="col-md-2">
-    <h2>Movie Title</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <a href="#" class="btn btn-default" role="button">View Details</a>
+  <div class="col-md-12">
+    <div class="panel panel-danger">
+      <div class="panel-heading">
+        <h2 class="panel-title">Popular Movies</h2>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div *ngFor="let movie of listPopularMovies;let i=index;" class="col-md-3">
+            <div *ngIf="i < 8">
+              <img alt="{{movie.title}}'s poster" *ngIf="movie.poster_path" class="thumbnail mov-thumb"
+                src="http://image.tmdb.org/t/p/w500/{{movie.poster_path}}">
+                <p>{{movie.release_date}}</p>
+                <p><a href="#" class="btn btn-info btn-block">View Details</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="col-md-2">
-    <h2>Movie Title</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <a href="#" class="btn btn-default" role="button">View Details</a>
-  </div>
-  <div class="col-md-2">
-    <h2>Movie Title</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <a href="#" class="btn btn-default" role="button">View Details</a>
-  </div>
-  <div class="col-md-2">
-    <h2>Movie Title</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <a href="#" class="btn btn-default" role="button">View Details</a>
-  </div>
-  <div class="col-md-2">
-    <h2>Movie Title</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <a href="#" class="btn btn-default" role="button">View Details</a>
-  </div>
-  <div class="col-md-2">
-    <h2>Movie Title</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <a href="#" class="btn btn-default" role="button">View Details</a>
+  <div class="col-md-12">
+    <div class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title">In Theathers</h3>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div *ngFor="let movie of listTheaters;let i=index;" class="col-md-3">
+            <div *ngIf="i < 8">
+              <img alt="{{movie.title}}'s poster" *ngIf="movie.poster_path" class="thumbnail mov-thumb"
+                src="http://image.tmdb.org/t/p/w500/{{movie.poster_path}}">
+                <p>{{movie.release_date}}</p>
+                <p><a href="#" class="btn btn-info btn-block">View Details</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

@@ -10,3 +10,11 @@ footer {
   margin-top: 20px;
   padding: 50px;
 }
+
+img {
+  width: 100%;
+}
+
+.mov-thumb {
+  min-height: 300px;
+}
