@@ -20,4 +20,9 @@ export class MovieService{
     return this._jsonp.get('https://api.themoviedb.org/3/discover/movie?callback=JSONP_CALLBACK&primary_release_date.gte=2016-10-01&primary_release_date.lte=2016-10-31&api_key=' + this.apiKey)
       .map(res => res.json())
   }
+
+  searchMovies(qMovie:string) {
+    return this._jsonp.get('https://api.themoviedb.org/3/search/movie?callback=JSONP_CALLBACK&query=' + qMovie + '&sort_by=popularity.desc&api_key=' + this.apiKey)
+      .map(res => res.json())
+  }
 }
